@@ -40,15 +40,7 @@ Para ello recuerde  que puede hacer uso, bien sea, de las tablas de verdad o de 
 
 * Definir en  HDL el comportamiento del sistema ** :  Use Verilog para hacer la descripción funcional
 **simulación de Sistema** :  Use el Testbench para este fin.
-**Implementación en la FPGA** :   crea el archivo UCF o XCF  e implemente  en la FPGA el sistema diseñado.  En la siguiente gráfica  se da un ejemplo de la implementan del `BCD to SSEG` en la tarjeta Basys2 
 
-
-![bcd_impl](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab03-BCD2SSeg/doc/BCD2SSeg_imple.jpg)
-
-
-**Compruebe el funcionamiento**
-
-> **NOTA:** La solución del ejercicio la encuentra en el siguiente [link](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/tree/master/lab/lab03-BCD2SSeg)
 
 # Ejercicio - Visualización Dinámica 4 Display- Segmentos
 
@@ -99,6 +91,6 @@ En el paquete de trabajo WP04   esta la descripción del hardware que se impleme
 * Cree el nuevo proyecto HDL para el display de 7 segmentos, tomando como base los archivos dados.
 * Creer el archivo testbench.v
 * Genera la simulación, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
-*  Modificar o Añadir los bloques necesarios para que la visualización sea en representación Decimal y no Hexadecimal.
+* Modificar o Añadir los bloques necesarios para que la visualización sea en representación Decimal y no Hexadecimal.
 * Realice la respectiva publicación del repositorio antes de la fecha dada con todo el código  fuente 
 
