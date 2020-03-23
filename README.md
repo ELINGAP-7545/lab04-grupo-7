@@ -42,7 +42,7 @@ Para ello recuerde  que puede hacer uso, bien sea, de las tablas de verdad o de 
 **simulación de Sistema** :  Use el Testbench para este fin.
 
 
-# Ejercicio - Visualización Dinámica 4 Display- Segmentos
+# Ejercicio - Visualización Dinámica 4 Display
 
 
 Si el diseño digital de algún sistema se requiere mas de un display de 7 segmentos, es necesario  generar una visualización tal que sea necesario el menor número de pines para conectar todos los display en con la FPGA.
@@ -81,14 +81,11 @@ Se evidencia que se deben construir cuatro módulos  básicos, de los cuales uno
 
 Una vez clone el repositorio y lea la anterior guia, realice lo siguiente:
 
-En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta la descripción del hardware que se implementa para visualizar un número hexadecimal de 32 bits en 4 display de 7 segmentos.
+En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta la descripción del hardware que se implementa para visualizar un número hexadecimal de 32 bits en un display  y en 4 display de 7 segmentos.
 
-
-* Comprenda cada línea del código HDL de los  archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente las diferencias entre las dos descripciones.
-
-* Analice la simulación de cada uno de los archivos y compruebe que el sumador funciona correctamente.
-
-* Cree el nuevo proyecto HDL para el display de 7 segmentos, tomando como base los archivos dados.
+* Comprenda cada línea del código HDL de los  archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
+* Realice en quartus la simulación para el BCD-7seg, analice los resultados.
+* Cree el nuevo proyecto HDL para Visualización Dinámica 4 Display, tomando como base los archivos dados.
 * Creer el archivo testbench.v
 * Genera la simulación, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
 * Modificar o Añadir los bloques necesarios para que la visualización sea en representación Decimal y no Hexadecimal.
