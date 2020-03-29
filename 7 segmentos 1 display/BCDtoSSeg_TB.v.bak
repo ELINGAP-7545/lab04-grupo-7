@@ -27,7 +27,6 @@ module BCDtoSSeg_TB;
 		BCD = 7; #10;
 		BCD = 8; #10;
 		BCD = 9; #10;
-		BCD = 10; #10;
 
 	end
 
