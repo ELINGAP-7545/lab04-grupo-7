@@ -1,0 +1,18 @@
+|BCDtoSSeg
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+SSeg[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+an[0] <= <GND>
+an[1] <= <VCC>
+an[2] <= <VCC>
+an[3] <= <VCC>
+
+
