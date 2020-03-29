@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/simulation/modelsim
 vBCDtoSSeg
-Z1 !s110 1585508502
+Z1 !s110 1585512980
 !i10b 1
 !s100 9Odz<fYcO:W8407J5G^OW3
 IONW1]OTI>mTo6UcYCdMaR2
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1585508502.000000
+Z4 !s108 1585512980.000000
 !s107 C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/BCDtoSSeg.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display|C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/BCDtoSSeg.v|
 !i113 1
