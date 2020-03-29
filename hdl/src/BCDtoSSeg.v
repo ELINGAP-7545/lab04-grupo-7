@@ -6,9 +6,9 @@ module BCDtoSSeg (BCD, SSeg, an);
 
 assign an=4'b1110;
 
-//programacion para 7 segemntos de anodo comun
+//programacion para 7 segmentos de anodo comun
 always @ ( * ) begin
-  case (BCD)
+  case (BCD)//Inicio de casos en orden decendente
    4'b0000: SSeg = 7'b0000001; // "0"  
 	4'b0001: SSeg = 7'b1001111; // "1" 
 	4'b0010: SSeg = 7'b0010010; // "2" 
@@ -19,12 +19,13 @@ always @ ( * ) begin
 	4'b0111: SSeg = 7'b0001111; // "7" 
 	4'b1000: SSeg = 7'b0000000; // "8"  
 	4'b1001: SSeg = 7'b0000100; // "9" 
-   4'ha: SSeg = 7'b0001000;  
-   4'hb: SSeg = 7'b1100000;
-   4'hc: SSeg = 7'b0110001;
-   4'hd: SSeg = 7'b1000010;
-   4'he: SSeg = 7'b0110000;
-   4'hf: SSeg = 7'b0111000;
+	//paso de binario a hexa
+   4'ha: SSeg = 7'b0001000;	//A
+   4'hb: SSeg = 7'b1100000;	//B
+   4'hc: SSeg = 7'b0110001;	//C
+   4'hd: SSeg = 7'b1000010;	//D
+   4'he: SSeg = 7'b0110000;	//E
+   4'hf: SSeg = 7'b0111000;	//F
     default:
     SSeg = 0;
   endcase
