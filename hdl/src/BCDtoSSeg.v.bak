@@ -6,7 +6,7 @@ module BCDtoSSeg (BCD, SSeg, an);
 
 assign an=4'b1110;
 
-//programacion para 7 segemntos de anodo comun
+
 always @ ( * ) begin
   case (BCD)
    4'b0000: SSeg = 7'b0000001; // "0"  
