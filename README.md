@@ -101,7 +101,9 @@ En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta 
 module BCDtoSSeg (BCD, SSeg, an);
 
   input [3:0] BCD;
+  
   output reg [0:6] SSeg;
+  
   output [3:0] an;
 
 assign an=4'b1110;
