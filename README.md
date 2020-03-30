@@ -139,15 +139,15 @@ always @ ( * ) begin
 	
 	//paso de binario a hexa
 	
-   4'ha: SSeg = 7'b0001000;	//A
+    4'ha: SSeg = 7'b0001000;	//A
    
-   4'hb: SSeg = 7'b1100000;	//B
+    4'hb: SSeg = 7'b1100000;	//B
    
-   4'hc: SSeg = 7'b0110001;	//C
+    4'hc: SSeg = 7'b0110001;	//C
+    
+    4'hd: SSeg = 7'b1000010;	//D
    
-   4'hd: SSeg = 7'b1000010;	//D
-   
-   4'he: SSeg = 7'b0110000;	//E
+    4'he: SSeg = 7'b0110000;	//E
    
    4'hf: SSeg = 7'b0111000;	//F
    
