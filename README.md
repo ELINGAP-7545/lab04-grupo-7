@@ -117,7 +117,7 @@ always @ ( * ) begin
 
   case (BCD)//Inicio de casos en orden decendente
   
-   4'b0000: SSeg = 7'b0000001; // "0"  
+    4'b0000: SSeg = 7'b0000001; // "0"  
    
 	4'b0001: SSeg = 7'b1001111; // "1" 
 	
