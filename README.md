@@ -149,7 +149,7 @@ always @ ( * ) begin
    
     4'he: SSeg = 7'b0110000;	//E
    
-   4'hf: SSeg = 7'b0111000;	//F
+    4'hf: SSeg = 7'b0111000;	//F
    
     default:
 	
