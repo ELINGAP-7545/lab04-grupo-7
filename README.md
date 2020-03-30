@@ -1,6 +1,6 @@
 # lab04
 
-##Integrantes
+## Integrantes
 
 Juan David Sandoval Suarez 39718
 
