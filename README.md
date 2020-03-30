@@ -87,7 +87,16 @@ Una vez clone el repositorio y lea la anterior guia, realice lo siguiente:
 
 En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta la descripción del hardware que se implementa para visualizar un número hexadecimal de 32 bits en un display  y en 4 display de 7 segmentos.
 
-# HDL
+
+* Comprenda cada línea del código HDL de los  archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
+* Realice en quartus la simulación para el BCD-7seg, analice los resultados.
+* Cree el nuevo proyecto HDL para Visualización Dinámica 4 Display, tomando como base los archivos dados.
+* Creer el archivo testbench.v
+* Genera la simulación, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
+* Modificar o Añadir los bloques necesarios para que la visualización sea en representación Decimal y no Hexadecimal.
+* Realice la respectiva publicación del repositorio antes de la fecha dada con todo el código  fuente 
+
+## HDL
 
 module BCDtoSSeg (BCD, SSeg, an);
 
@@ -123,13 +132,3 @@ always @ ( * ) begin
 end
 
 endmodule
-
-
-
-* Comprenda cada línea del código HDL de los  archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
-* Realice en quartus la simulación para el BCD-7seg, analice los resultados.
-* Cree el nuevo proyecto HDL para Visualización Dinámica 4 Display, tomando como base los archivos dados.
-* Creer el archivo testbench.v
-* Genera la simulación, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
-* Modificar o Añadir los bloques necesarios para que la visualización sea en representación Decimal y no Hexadecimal.
-* Realice la respectiva publicación del repositorio antes de la fecha dada con todo el código  fuente 
