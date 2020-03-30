@@ -1,16 +1,12 @@
 # lab04
 
-INTENGRANTES
+##Integrantes
+
+Juan David Sandoval Suarez 39718
 
 Bryan Daniel Melo Guzman 49686
 
 Fabian Santiago Martin Morantes 60821
-
-Juan David Sandoval Suarez 39718
-
-
-
-
 
 # Introducción
 
