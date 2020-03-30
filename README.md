@@ -6,6 +6,8 @@ Juan David Sandoval Suarez 39718
 
 Bryan Daniel Melo Guzman 49686
 
+Fabian Santiago Martin Morantes 60821
+
 # Introducción
 
 En este paquete de trabajo los estudiantes deben familiarizarce con el  framework de trabajo de la FPGA seleccionado, a partir de la descripción dedecodificador BCD2SSeg
