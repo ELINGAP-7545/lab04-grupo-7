@@ -1,4 +1,4 @@
-# lab04
+# **LABORATORIO BCD**
 
 ## Integrantes
 
