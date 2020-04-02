@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/simulation/modelsim
 vBCDtoSSeg
-Z1 !s110 1585513107
+Z1 !s110 1585867200
 !i10b 1
 !s100 9Odz<fYcO:W8407J5G^OW3
 IYkXWQY8^hMAJ?BI:XYGL`2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1585506834
+w1585863749
 8C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/bcdtosseg.v
 FC:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/bcdtosseg.v
 L0 1
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1585513107.000000
+Z4 !s108 1585867200.000000
 !s107 C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/bcdtosseg.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display|C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/bcdtosseg.v|
 !i113 1
@@ -38,7 +38,7 @@ R1
 IBY232HV4;z0?XETZfBT0m0
 R2
 R0
-w1585512033
+w1585598429
 8C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/display.v
 FC:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/display.v
 L0 2
@@ -56,11 +56,11 @@ R7
 vtestbench
 R1
 !i10b 1
-!s100 _[Il3Wjd9QM?0]PA[H2YW2
-IRXNo=IY7I3>J]c6YUSNcz0
+!s100 GL4IM5J@0GLS063ckE;NM2
+IgCILU`D30DJHeXNCPB2RN3
 R2
 R0
-w1585512671
+w1585867182
 8C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/testbench.v
 FC:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/testbench.v
 L0 4

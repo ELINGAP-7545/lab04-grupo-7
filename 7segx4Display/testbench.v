@@ -14,7 +14,7 @@ module testbench;
 
 	// Instantiate the Unit Under Test (UUT)
 	display uut (
-	//	.num(num), 
+		.num(num), 
 		.clk(clk2), 
 		.sseg(sseg), 
 		.an(an), 
@@ -28,6 +28,8 @@ module testbench;
 		#10 rst =0;
 		
 		num = 16'h4321;
+		
+		//num = 16'h4321;
         
 
 	end
