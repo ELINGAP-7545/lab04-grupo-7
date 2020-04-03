@@ -12,29 +12,29 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/RESPALDO/Documentos/Universidad\ Profesional/6/Arquitectura/Corte\ 2/lab04-grupo-7/7\ segmentos\ 1\ display {C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/BCDtoSSeg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:16:20 on Mar 29,2020
+# Start time: 18:40:43 on Apr 02,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display" C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/BCDtoSSeg.v 
 # -- Compiling module BCDtoSSeg
 # 
 # Top level modules:
 # 	BCDtoSSeg
-# End time: 15:16:20 on Mar 29,2020, Elapsed time: 0:00:00
+# End time: 18:40:43 on Apr 02,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/RESPALDO/Documentos/Universidad\ Profesional/6/Arquitectura/Corte\ 2/lab04-grupo-7/7\ segmentos\ 1\ display {C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/BCDtoSSeg_TB.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:16:20 on Mar 29,2020
+# Start time: 18:40:44 on Apr 02,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display" C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/BCDtoSSeg_TB.v 
 # -- Compiling module BCDtoSSeg_TB
 # 
 # Top level modules:
 # 	BCDtoSSeg_TB
-# End time: 15:16:20 on Mar 29,2020, Elapsed time: 0:00:00
+# End time: 18:40:44 on Apr 02,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  BCDtoSSeg_TB
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" BCDtoSSeg_TB 
-# Start time: 15:16:20 on Mar 29,2020
+# Start time: 18:40:44 on Apr 02,2020
 # Loading work.BCDtoSSeg_TB
 # Loading work.BCDtoSSeg
 # ** Warning: (vsim-3017) C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/BCDtoSSeg_TB.v(13): [TFMPC] - Too few port connections. Expected 3, found 2.
@@ -44,17 +44,16 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: david.sandoval  Hostname: INFOMP214  ProcessID: 9416
-#           Attempting to use alternate WLF file "./wlft62k6kk".
+#           Attempting to use alternate WLF file "./wlft2zrbyb".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft62k6kk
+#           Using alternate file: ./wlft2zrbyb
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $finish    : C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/BCDtoSSeg_TB.v(36)
+# ** Note: $finish    : C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/BCDtoSSeg_TB.v(41)
 #    Time: 200 ns  Iteration: 0  Instance: /BCDtoSSeg_TB
 # 1
-# Break in NamedBeginStat TEST_CASE at C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/BCDtoSSeg_TB.v line 36
-# End time: 15:16:56 on Mar 29,2020, Elapsed time: 0:00:36
-# Errors: 0, Warnings: 4
+# Break in NamedBeginStat TEST_CASE at C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7 segmentos 1 display/BCDtoSSeg_TB.v line 41
+noforce sim:/BCDtoSSeg_TB/SSeg

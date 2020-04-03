@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/simulation/modelsim
 vBCDtoSSeg
-Z1 !s110 1585867200
+Z1 !s110 1585867902
 !i10b 1
 !s100 9Odz<fYcO:W8407J5G^OW3
 IYkXWQY8^hMAJ?BI:XYGL`2
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1585867200.000000
+Z4 !s108 1585867902.000000
 !s107 C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/bcdtosseg.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display|C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/bcdtosseg.v|
 !i113 1
@@ -56,11 +56,11 @@ R7
 vtestbench
 R1
 !i10b 1
-!s100 GL4IM5J@0GLS063ckE;NM2
-IgCILU`D30DJHeXNCPB2RN3
+!s100 :jQbWi^V:ZWRfEOJW]US70
+I5KbVaB;HMajAigfUa;1i:1
 R2
 R0
-w1585867182
+w1585867817
 8C:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/testbench.v
 FC:/RESPALDO/Documentos/Universidad Profesional/6/Arquitectura/Corte 2/lab04-grupo-7/7segx4Display/testbench.v
 L0 4

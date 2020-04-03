@@ -104,8 +104,9 @@ En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta 
 
 # HDL
 
-## 7 Segmentos 1 Display 
+## 7 Segmentos 1 Display
 
+``` verilog 
 module BCDtoSSeg (BCD, SSeg, an);
 
 input [3:0] BCD;	
@@ -163,3 +164,4 @@ always @ ( * ) begin
 end
 
 endmodule
+```
