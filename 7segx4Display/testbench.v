@@ -4,18 +4,20 @@
 module testbench;
 
 	// Inputs
-	reg [15:0] num;
-	reg clk2;
+	reg [15:0] num=0;
+	reg clk;
 	reg rst;
+	reg [15:0] i;
 
 	// Outputs
 	wire [0:6] sseg;
 	wire [3:0] an;
+	
 
 	// Instantiate the Unit Under Test (UUT)
 	display uut (
 		.num(num), 
-		.clk(clk2), 
+		.clk(clk), 
 		.sseg(sseg), 
 		.an(an), 
 		.rst(rst)
@@ -23,18 +25,28 @@ module testbench;
 
 	initial begin
 		// Initialize Inputs
-		clk2= 0;
+		
+		for(i=0;i<1;i=i+1)begin
+		
+		
+		clk= 0;
 		rst = 1;
 		#10 rst =0;
 		
-		num = 16'h4321;
+	//	if(rst==0)begin
+		
+		num=num+1;
+		
+		//end
+		
+		//num = 16'h4321;
 		
 		//num = 16'h4321;
         
-
+	end
 	end
       
 
-	always #1 clk2 = ~clk2;
+	always #1 clk = ~clk;
 	
 endmodule
