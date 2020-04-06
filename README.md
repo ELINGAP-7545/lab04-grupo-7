@@ -13,15 +13,14 @@ Fabian Santiago Martin Morantes 60821;
 
 # Introducción
 
-En este paquete de trabajo los estudiantes deben familiarizarce con el  framework de trabajo de la FPGA seleccionado, a partir de la descripción dedecodificador BCD2SSeg
-
-Para este paquete de trabajo, deben estar inscrito en un grupo y clonar la información del siguiente link [WP04](https://classroom.github.com/g/zCBwHHKX). Una vez aceptado el repositorio debe descargarlo en su computador, para ello debe clonar el mismo. Si no sabe cómo hacerlo revise la metodología de trabajo, donde se explica el proceso
-
-Las documentación deben estar diligencia en el archivo README.md del repositorio clonado.
-
-Una vez clone el repositorio, realice lo siguiente:
+Para la realización de este laboratorio, utilizamos los códigos base que el profesor nos proporcionó para el correcto funcionamiento del laboratorio. Cabe resaltar que se debe entender cada l�nea del código para poder tener un mejor entendimiento a la hora de hacer preguntas que surgen a lo largo del laboratorio.   
 
 ## Diseño BCD-7seg
+
+Para el diseño de un display de 7 segmentos y su respectiva visualización, se debe implementar el código base que tenemos y entender cada l�nea para as� poder conseguir conocimientos más exactos al momento de implementar más displays.
+
+
+
 
 En este punto, ya se estar en la capacidad de describir e implementar Hardware sencillo, con la ayuda de herramientas computaciones.  y como se vio en los dos ejemplos anteriores, la suma se visualiza en leds,  algo que es difícil para  validad visualmente la respuesta. Por lo tanto, es aconsejable tener una visualización mas acorde a las necesidades, como por ejemplo  visualizar los resultados en el [ Display 7 Segmentos](https://en.wikipedia.org/wiki/Seven-segment_display) 
 
@@ -42,6 +41,27 @@ Si observa la caja negra/ funcional  ademas  de la salidad de 7 segmentos contie
 
 
 **Definir la descripción Funcional**
+
+Un display 7 segmentos es un visualizador de numeros o letras dependiendo de la conexion externa para lo que se desee implementar. Esta construido por unos leds que tienen unas conexiones internas para su correcto funcionamiento, existen dos tipos de visualizadores y se diferencian en la entrada de alimentacion. 
+
+**Anodo Comun:** Este visualizador tiene todos los anodos de los leds conectados internamente. Para poder encender cada uno de los segmentos, se debe aplicar un potencial negativo (en logica binaria 0).
+
+**Catodo Comun:** Este visualizador tiene todos los catodos de los leds conectados internamente. Para poder encender cada uno de los segmentos, se debe aplicar un potencial positivo (en logica binaria 1).
+
+Se recomienda implementar externamente una resitencia detro de lo posible de 330? a cada segmento del display para asi poder limitar la corriente.
+Despues de tener claro lo anterior, procedemos a realizar la tabla de verdad del visualizador de 7 segmentos (display), para cada numero y/o letra que se desee ver. Para ello se tiene en cuenta la conexion interna del display que se presenta a continuacion:
+
+![imagen_display_7_seg](https://http2.mlstatic.com/display-7-segmentos-D_NQ_NP_965598-MLM29489271353_022019-F.jpg)
+
+De la anterior imagen podemos sacar las siguientes tablas de verdad:
+
+![tabla_de_verdad](https://http2.mlstatic.com/display-7-segmentos-D_NQ_NP_965598-MLM29489271353_022019-F.jpg)
+
+
+
+
+
+dbnfvjfd vodjfj klvckjeufn f
 
 Para ello recuerde  que puede hacer uso, bien sea, de las tablas de verdad o de la descripción algorítmica del BCD a  siete segmentos. Recuerde que cada Segmento es una salida  del diseño. Ejemplo, si desea  visualizar el número **1**, la salida seria  de `Sseg es 0110000`. observe la gráfica a continuación, para generar las salidas acorde al número de entrada.
 
