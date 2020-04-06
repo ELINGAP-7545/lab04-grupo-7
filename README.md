@@ -119,7 +119,7 @@ En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta 
 # HDL
 
 ## 7 Segmentos 1 Display 
-
+```verilog
 module BCDtoSSeg (BCD, SSeg, an);
 
 input [3:0] BCD;	
@@ -177,8 +177,8 @@ always @ ( * ) begin
 end
 
 endmodule
-
-# Testbench
+```
+## Testbench
 
 ```verilog
 
@@ -229,6 +229,106 @@ endmodule
 
 ```
 
-# Simulación Quartus
+## Simulación Quartus
 
 ![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/BCDtoSSeg_TB.PNG)
+
+#7 Segmentos x4Displays
+
+##VHL
+Se crea en la siguiente ruta: https://github.com/ELINGAP-7545/lab04-grupo-7/tree/master/7segx4Display
+
+```verilog
+`timescale 1ns / 1ps
+module display(
+    input [15:0] num,
+    input clk,
+    output [0:6] sseg,
+    output reg [3:0] an,
+	 input rst,
+	 output led
+    );
+
+
+
+reg [3:0]bcd=0;
+//wire [15:0] num=16'h4321;
+ 
+BCDtoSSeg bcdtosseg(.BCD(bcd), .SSeg(sseg));
+
+reg [26:0] cfreq=0;
+wire enable;
+
+// Divisor de frecuecia
+
+assign enable = cfreq[16];
+assign led =enable;
+always @(posedge clk) begin
+  if(rst==1) begin
+		cfreq <= 0;
+	end else begin
+		cfreq <=cfreq+1;
+	end
+end
+
+reg [1:0] count =0;
+always @(posedge enable) begin
+		if(rst==1) begin
+			count<= 0;
+			an<=4'b1111; 
+		end else begin 
+			count<= count+1;
+			an<=4'b1101; 
+			case (count) 
+				2'h0: begin bcd <= num[3:0];   an<=4'b1110; end 
+				2'h1: begin bcd <= num[7:4];   an<=4'b1101; end 
+				2'h2: begin bcd <= num[11:8];  an<=4'b1011; end 
+				2'h3: begin bcd <= num[15:12]; an<=4'b0111; end 
+			endcase
+		end
+end
+
+endmodule
+```
+
+##Testbench
+```verilog
+`timescale 1ns / 1ps
+
+module testbench;
+
+	// Inputs
+	reg [15:0] num;
+	reg clk2;
+	reg rst;
+
+	// Outputs
+	wire [0:6] sseg;
+	wire [3:0] an;
+
+	// Instantiate the Unit Under Test (UUT)
+	display uut (
+		.num(num), 
+		.clk(clk2), 
+		.sseg(sseg), 
+		.an(an), 
+		.rst(rst)
+	);
+
+	initial begin
+		// Initialize Inputs
+		clk2= 0;
+		rst = 1;
+		#10 rst =0;
+		
+		num = 16'h4321;
+        
+
+	end
+      
+
+	always #1 clk2 = ~clk2;
+	
+endmodule
+
+```
