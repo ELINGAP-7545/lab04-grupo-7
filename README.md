@@ -60,11 +60,11 @@ Display
 
 BCDtoSSeg_TB
 
-![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/BCDtoSSeg_TB.PNG.
+![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/BCDtoSSeg_TB.PNG)
 
 Dejando como TOP a BCDtoSSeg, al momento de realizar la sintetizacion se obtienen los siguientes resultados
 
-![diagrama] ( https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Quartus%207seg1Display.jpg)
+![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Quartus%207seg1Display.jpg)
 
 
 # Ejercicio - Visualización Dinámica 4 Display
