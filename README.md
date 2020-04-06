@@ -178,6 +178,7 @@ end
 
 endmodule
 ```
+
 ## Testbench
 
 ```verilog
@@ -231,11 +232,13 @@ endmodule
 
 ## Simulación Quartus
 
-![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/BCDtoSSeg_TB.PNG)
+![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Quartus%207seg1Display.jpg)
 
-#7 Segmentos x4Displays
 
-##VHL
+# 7 Segmentos x4Displays
+
+## VHL
+
 Se crea en la siguiente ruta: https://github.com/ELINGAP-7545/lab04-grupo-7/tree/master/7segx4Display
 
 ```verilog
@@ -291,7 +294,9 @@ end
 endmodule
 ```
 
-##Testbench
+## Testbench
+
+
 ```verilog
 `timescale 1ns / 1ps
 
