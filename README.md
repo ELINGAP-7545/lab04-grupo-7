@@ -72,7 +72,6 @@ Dejando como TOP a BCDtoSSeg, al momento de realizar la sintetizacion se obtiene
 
 Si el diseño digital de algún sistema se requiere mas de un display de 7 segmentos, es necesario  generar una visualización tal que sea necesario el menor número de pines para conectar todos los display en con la FPGA.
 
-aaaa
 
 Por ahora, se ha visualizado el números en un solo display de 7 segmentos. Pero en la mayoría de los casos, los 7 pines de los cátodos están inter-conectados entre cada display, como se observa en la figura:
 
