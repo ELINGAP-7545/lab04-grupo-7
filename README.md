@@ -48,11 +48,31 @@ Para ello recuerde  que puede hacer uso, bien sea, de las tablas de verdad o de 
 * Definir en  HDL el comportamiento del sistema ** :  Use Verilog para hacer la descripción funcional
 **simulación de Sistema** :  Use el Testbench para este fin.
 
+Se realiza verificacion de los siguientes codigos en el programa QUARTUS
+
+BCDtoSSeg
+
+![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/BCDtoSSeg.PNG)
+
+Display
+
+![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/display.PNG)
+
+BCDtoSSeg_TB
+
+![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/BCDtoSSeg_TB.PNG.
+
+Dejando como TOP a BCDtoSSeg, al momento de realizar la sintetizacion se obtienen los siguientes resultados
+
+![diagrama] ( https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Quartus%207seg1Display.jpg)
+
 
 # Ejercicio - Visualización Dinámica 4 Display
 
 
 Si el diseño digital de algún sistema se requiere mas de un display de 7 segmentos, es necesario  generar una visualización tal que sea necesario el menor número de pines para conectar todos los display en con la FPGA.
+
+aaaa
 
 Por ahora, se ha visualizado el números en un solo display de 7 segmentos. Pero en la mayoría de los casos, los 7 pines de los cátodos están inter-conectados entre cada display, como se observa en la figura:
 
@@ -62,13 +82,7 @@ Por lo tanto, se debe  realizar una multiplexación  entre los Anodos de cada Di
 
 Visualmente esto se entiende mas con la siguiente simulación, donde se desea visualizar el  número en representación hexadecimal `0x4321`:
 
-
 ![diagrama](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/4sseg.jpg).
-
-Acontinuacion se vizualiza una imagen de la simulacion para un display de 7 segmentos.
-
-![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Quartus%207seg1Display.jpg).
-
 
 ## Diagrama Caja negra 
 
