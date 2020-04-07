@@ -183,7 +183,9 @@ endmodule
 
 ```verilog
 
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps //se utiliza para especificar unidad de tiempo en la simulación donde dará una 
+					//duración de tiempo de 1ns en los delays que se encuentran posteriormente y 1ps para el 
+					//análisis de recolección de datos. 
 
 
 module BCDtoSSeg_TB;
@@ -298,7 +300,9 @@ endmodule
 
 
 ```verilog
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps//se utiliza para especificar unidad de tiempo en la simulación donde dará una 
+					//duración de tiempo de 1ns en los delays que se encuentran posteriormente y 1ps para el 
+					//análisis de recolección de datos. 
 
 module testbench;
 
@@ -342,4 +346,6 @@ endmodule
 
 ```
 ## Simulación Quartus
+
+![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Display4Seg.png)
 
