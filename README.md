@@ -284,3 +284,6 @@ endmodule
 ## 1
 Para poder entender el archivo buscamos identificar los valores numericos que se encuentran dado, para iniciar quitamos los comentarios dentro del de ¡§.num(num)¡¨ ya que es necesario contar con esta dado que dara la instruccion del display actualmente esta en valor hexadecimal 4321 lo que significa que en el primer display mostrara el numero 1 luego el numero 2, 3 y finalmente el numero 4. Para poder identificar esto se modifica para que quede en 8439, para que muestre la combinacion de la siguiente manera display 1: numero 9, display 2: numero 3, display 3: numero 4, display 4: numero 8, se realiza la simulacion y esta funciona sin problemas. 
 
+## 2 
+En conclusion debemos tener presente el tipo de DISPLAY con el cual vamos a realizar la respectiva actividad ya que el uso de este interfiere altamente en la programación ( ánodo común, cátodo común).
+
