@@ -80,7 +80,7 @@ always @ ( * ) begin
 	
 	4'b1001: SSeg = 7'b0000100; // "9" 
 	
-	//paso de binario a hexa
+	//paso de binario a hexadecimal
 	
     4'ha: SSeg = 7'b0001000;	//A
    
@@ -116,7 +116,7 @@ endmodule
 module BCDtoSSeg_TB;
 
 	// Inputs
-	reg [3:0] BCD;
+	reg [3:0] BCD;   //Se observa que se tiene una entrada llamada BCD de 4 bit's
 
 	// Outputs
 	wire [6:0] SSeg;
