@@ -328,14 +328,14 @@ module testbench;
 	initial begin
 		// Initialize Inputs
 		
-		//for(i=0;i<10;i=i+1)begin
+		
 		clk2= 0;
 		rst = 1;
 		#10 rst =0;
 		
 		num = 16'h8439;
 		
-      //end
+      
 
 	end
       
