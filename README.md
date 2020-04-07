@@ -18,15 +18,15 @@ Una vez clone el repositorio y lea la anterior guia, realice lo siguiente:
 
 En el paquete de trabajo WP04 esta la descripci車n del hardware que se implementa para visualizar un n迆mero hexadecimal de 32 bits en un display y en 4 display de 7 segmentos.
 
-Comprenda cada l赤nea del c車digo HDL de los archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
-Realice en quartus la simulaci車n para el BCD-7seg, analice los resultados.
-Cree el nuevo proyecto HDL para Visualizaci車n Din芍mica 4 Display, tomando como base los archivos dados.
-Creer el archivo testbench.v
-Genera la simulaci車n, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
-Modificar o A?adir los bloques necesarios para que la visualizaci車n sea en representaci車n Decimal y no Hexadecimal.
-Realice la respectiva publicaci車n del repositorio antes de la fecha dada con todo el c車digo fuente
+1. Comprenda cada linea del codigo VERILOG QUARTUS de los archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
+Realice en quartus la simulacion para el BCD-7seg, analice los resultados.
+2. Cree el nuevo proyecto VERILOG QUARTUS para Visualizaci鏮 Dinamica 4 Display, tomando como base los archivos dados.
+3.Creer el archivo testbench.v
+4.Genera la simulaci鏮, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
+5.Modificar o A鎙dir los bloques necesarios para que la visualizaci鏮 sea en representaci鏮 Decimal y no Hexadecimal.
+Realice la respectiva publicaci鏮 del repositorio antes de la fecha dada con todo el c鏚igo fuente.
 
-# HDL
+# VERILOG QUARTUS
 
 ## 7 Segmentos 1 Display 
 ```verilog
@@ -257,7 +257,7 @@ endmodule
 ```
 
 
-## Simulaci車n Quartus
+## Simulaci鏮 Quartus
 
 ![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Display4Seg.png)
 
