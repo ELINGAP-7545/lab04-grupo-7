@@ -303,7 +303,8 @@ endmodule
 module testbench;
 
 	// Inputs
-	reg [15:0] num;
+	reg [15:0] num=0;
+	reg [15:0] i;
 	reg clk2;
 	reg rst;
 
@@ -322,12 +323,15 @@ module testbench;
 
 	initial begin
 		// Initialize Inputs
+		
+		//for(i=0;i<10;i=i+1)begin
 		clk2= 0;
 		rst = 1;
 		#10 rst =0;
 		
-		num = 16'h4321;
-        
+		num = 16'h8439;
+		
+      //end
 
 	end
       
@@ -337,3 +341,5 @@ module testbench;
 endmodule
 
 ```
+## Simulación Quartus
+
