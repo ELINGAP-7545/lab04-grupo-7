@@ -10,25 +10,19 @@ Juan David Sandoval Suarez 39718
 
 # Introduccion
 
-Para la realización de este laboratorio, utilizamos los códigos base que el profesor nos proporcionó para el correcto funcionamiento del laboratorio. Cabe resaltar que se debe entender cada l�nea del código para poder tener un mejor entendimiento a la hora de hacer preguntas que surgen a lo largo del laboratorio.   
+Para la realizacion de este laboratorio, utilizamos los codigos entregados por el profesor para el correcto funcionamiento del laboratorio. Cabe resaltar que se debe entender cada linea del codigo para poder tener un mejor entendimiento a la hora de hacer preguntas que surgen a lo largo de este.   
 
 ## Dise�o BCD-7seg
 
-Para el diseño de un display de 7 segmentos y su respectiva visualización, se debe implementar el código base que tenemos y entender cada l�nea para as� poder conseguir conocimientos más exactos al momento de implementar más displays.
+En este Ejercicio se propone que realicen el dise�o, sintentizacion e implementacion del Display de 7 segmentos, el cual permita visualizar numeros  en representacion hexadecimal (0x0 a 0xF).  En el siguiente grafico, se observa cual es el funcionamiento deseado del display:
 
-
-
-
-En este punto, ya se estar en la capacidad de describir e implementar Hardware sencillo, con la ayuda de herramientas computaciones.  y como se vio en los dos ejemplos anteriores, la suma se visualiza en leds,  algo que es difícil para  validad visualmente la respuesta. Por lo tanto, es aconsejable tener una visualización mas acorde a las necesidades, como por ejemplo  visualizar los resultados en el [ Display 7 Segmentos](https://en.wikipedia.org/wiki/Seven-segment_display) 
-
-En este Ejercicio se propone que realicen el diseño, sintentización e implementación del Display de 7 sergmentos, el cual permita visualizar números  en representación hexadecimal (0x0 a 0xF).  En el siguiente gráfico, se observa cual es el funcionamiento deseado del display:
-
+[ Display 7 Segmentos](https://en.wikipedia.org/wiki/Seven-segment_display) 
 
 ![gif display](https://upload.wikimedia.org/wikipedia/commons/2/2b/Seven_segment_display-animated.gif)
 
 Imagen tomada de [User:Guam + Various](https://commons.wikimedia.org/wiki/File:Seven_segment_display-animated.gif)
 
-A continuación se presentan los pasos recomendados para el ejercicio:
+A continuacion se presentan los pasos recomendados para el ejercicio:
 
 **Definir la caja funcional del BCD**: 
 
@@ -54,19 +48,13 @@ De la anterior imagen podemos sacar las siguientes tablas de verdad:
 
 ![tabla_de_verdad](https://http2.mlstatic.com/display-7-segmentos-D_NQ_NP_965598-MLM29489271353_022019-F.jpg)
 
-
-
-
-
-dbnfvjfd vodjfj klvckjeufn f
-
 Para ello recuerde  que puede hacer uso, bien sea, de las tablas de verdad o de la descripción algorítmica del BCD a  siete segmentos. Recuerde que cada Segmento es una salida  del diseño. Ejemplo, si desea  visualizar el número **1**, la salida seria  de `Sseg es 0110000`. observe la gráfica a continuación, para generar las salidas acorde al número de entrada.
 
 ![sseg](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/7_segment_display_labeled.svg/1024px-7_segment_display_labeled.svg.png)
 
 
-* Definir en  HDL el comportamiento del sistema ** :  Use Verilog para hacer la descripción funcional
-**simulación de Sistema** :  Use el Testbench para este fin.
+* Definir en QUARTUS el comportamiento del sistema ** :  Use Verilog para hacer la descripcion funcional
+**simulacion de Sistema** :  Use el Testbench para este fin.
 
 Se realiza verificacion de los siguientes codigos en el programa QUARTUS
 
@@ -87,7 +75,7 @@ Dejando como TOP a BCDtoSSeg, al momento de realizar la simulacion Testbench se 
 ![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Quartus%207seg1Display.jpg)
 
 
-# Ejercicio - Visualización Dinámica 4 Display
+# Ejercicio - Visualizacion Dinamica 4 Display
 
 
 Si el diseño digital de algún sistema se requiere mas de un display de 7 segmentos, es necesario  generar una visualización tal que sea necesario el menor número de pines para conectar todos los display en con la FPGA.
