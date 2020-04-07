@@ -45,7 +45,7 @@ Para el diseño de un display de 7 segmentos y su respectiva visualizacion, se d
 
 Como se puede apreciar en la imagen, se observa que se tiene una entrada llamada BCD de 4 bit's, una salida llamada An la cual sera utilizada para conectar el anodo del display y poder hacer la  visualizacion dinamica, cuando se tiene mas de un display conectado y una salida llamada SSEG de 7 bit's que van conectados al display. 
 
-**Definir la descripciÃ³n Funcional**
+**Definir la descripcion Funcional**
 
 Un display de 7 segmentos es un visualizador de numeros o letras, dependiendo de la conexion externa para lo que se desee implementar. Esta construido por unos leds que tienen unas conexiones internas para su correcto funcionamiento, existen dos tipos de visualizadores y se diferencian en la entrada de alimentacion. 
 
@@ -61,9 +61,7 @@ Despues de tener claro lo anterior, procedemos a realizar la tabla de verdad del
 
 De la anterior imagen podemos sacar las siguientes tablas de verdad:
 
-![tabla_de_verdad]()
-
-Teniendo la tabla de verdad, se procede a revisar y simular el siguiente codigo
+![tabla_de_verdad](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Tabla%20de%20Verdad.jpg)
 
 # VERILOG QUARTUS
 
