@@ -140,14 +140,14 @@ endmodule
 
 ```
 
-## Simulaci¨®n Quartus
+## Simulación Quartus
 
 ![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Quartus%207seg1Display.jpg)
 
 
 # 7 Segmentos x4Displays
 
-## VHL
+## VERILOG QUARTUS
 
 Se crea en la siguiente ruta: https://github.com/ELINGAP-7545/lab04-grupo-7/tree/master/7segx4Display
 
