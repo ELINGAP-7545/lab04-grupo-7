@@ -171,12 +171,16 @@ Se crea en la siguiente ruta: https://github.com/ELINGAP-7545/lab04-grupo-7/tree
 ```verilog
 `timescale 1ns / 1ps       //Es una escala de tiempo que indica el valor de cada unidad de tiempo, en este caso cada unidad es 1ns y la simulacion tiene una presicion de 1ps
 module display(
+
+    //Inputs
     input [15:0] num,
     input clk,
-    output [0:6] sseg,
+    
+    //Outputs
+    output [0:6] sseg,    //se observa que se tiene una salida llamada sseg de 7 bit's que van conectados al display
     output reg [3:0] an,
-	 input rst,
-	 output led
+	 input rst,      //Input
+	 output led      //Output
     );
 
 
@@ -191,12 +195,12 @@ wire enable;
 
 // Divisor de frecuecia
 
-assign enable = cfreq[16];         
+assign enable = cfreq[16];         //Su funcion es dividir la frecuencia de `clk` de entrada, en el tiempo requerido para cada cambio de anodo
 
 assign led =enable;
 always @(posedge clk) begin
   if(rst==1) begin
-		cfreq <= 0;               //Su funcion es dividir la frecuencia de `clk` de entrada, en el tiempo requerido para cada cambio de anodo
+		cfreq <= 0;               
 	end else begin
 		cfreq <=cfreq+1;
 	end
