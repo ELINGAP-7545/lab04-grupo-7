@@ -191,11 +191,12 @@ wire enable;
 
 // Divisor de frecuecia
 
-assign enable = cfreq[16];
+assign enable = cfreq[16];         
+
 assign led =enable;
 always @(posedge clk) begin
   if(rst==1) begin
-		cfreq <= 0;
+		cfreq <= 0;               //Su funcion es dividir la frecuencia de `clk` de entrada, en el tiempo requerido para cada cambio de anodo
 	end else begin
 		cfreq <=cfreq+1;
 	end
