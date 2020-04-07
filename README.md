@@ -28,6 +28,8 @@ Realice la respectiva publicación del repositorio antes de la fecha dada con tod
 
 # VERILOG QUARTUS
 
+Tener encuenta que el siguiente codigo representa los leds que se van a encontrar activados durante el proceso, tomando como 0 los que se van a encontrar activos y 1 como apagados.
+
 ## 7 Segmentos 1 Display 
 ```verilog
 module BCDtoSSeg (BCD, SSeg, an);
