@@ -119,7 +119,7 @@ module BCDtoSSeg_TB;
 	reg [3:0] BCD;   //Se observa que se tiene una entrada llamada BCD de 4 bit's
 
 	// Outputs
-	wire [6:0] SSeg;
+	wire [6:0] SSeg;    //se observa que se tiene una salida llamada sseg de 7 bit's que van conectados al display
 
 	// Instantiate the Unit Under Test (UUT)
 	BCDtoSSeg uut (
