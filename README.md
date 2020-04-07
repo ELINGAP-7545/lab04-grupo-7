@@ -49,7 +49,7 @@ module BCDtoSSeg (BCD, SSeg, an);
 input [3:0] BCD;   //se observa que se tiene una entrada llamada BCD de 4 bit's
 
 //Outputs
-output reg [0:6] SSeg;	
+output reg [0:6] SSeg;	//se observa que se tiene una salida llamada sseg de 7 bit's que van conectados al display
 output [3:0] an;	
 
 assign an=4'b1110;
