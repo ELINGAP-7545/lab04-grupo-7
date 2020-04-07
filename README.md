@@ -31,7 +31,7 @@ A continuacion se presentan los pasos recomendados para el ejercicio:
 Si observa la caja negra/ funcional  ademas  de la salidad de 7 segmentos contiene  una salida `An`. esta salida es para conectar eventualmente el ánodo del display y  poder hacer visualización dinámica, cuando se tiene mas de un display conectado.
 
 
-**Definir la descripción Funcional**
+**Definir la descripcion Funcional**
 
 Un display 7 segmentos es un visualizador de numeros o letras dependiendo de la conexion externa para lo que se desee implementar. Esta construido por unos leds que tienen unas conexiones internas para su correcto funcionamiento, existen dos tipos de visualizadores y se diferencian en la entrada de alimentacion. 
 
@@ -48,7 +48,7 @@ De la anterior imagen podemos sacar las siguientes tablas de verdad:
 
 ![tabla_de_verdad](https://http2.mlstatic.com/display-7-segmentos-D_NQ_NP_965598-MLM29489271353_022019-F.jpg)
 
-Para ello recuerde  que puede hacer uso, bien sea, de las tablas de verdad o de la descripción algorítmica del BCD a  siete segmentos. Recuerde que cada Segmento es una salida  del diseño. Ejemplo, si desea  visualizar el número **1**, la salida seria  de `Sseg es 0110000`. observe la gráfica a continuación, para generar las salidas acorde al número de entrada.
+Para ello recuerde  que puede hacer uso, bien sea, de las tablas de verdad o de la descripción algorítmica del BCD a  siete segmentos. Recuerde que cada Segmento es una salida  del dise�o. Ejemplo, si desea  visualizar el numero **1**, la salida seria  de `Sseg es 0110000`. observe la grafica a continuacion, para generar las salidas acorde al numero de entrada.
 
 ![sseg](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/7_segment_display_labeled.svg/1024px-7_segment_display_labeled.svg.png)
 
