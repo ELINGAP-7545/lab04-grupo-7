@@ -16,26 +16,22 @@ Juan David Sandoval Suarez 39718
 
 Una vez clone el repositorio y lea la anterior guia, realice lo siguiente:
 
-En el paquete de trabajo WP04 esta la descripciÈ´á del hardware que se implementa para visualizar un nÈ∑êero hexadecimal de 32 bits en un display y en 4 display de 7 segmentos.
+En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta la descripci®Æn del hardware que se implementa para visualizar un n®≤mero hexadecimal de 32 bits en un display  y en 4 display de 7 segmentos.
 
-1. Comprenda cada linea del codigo VERILOG QUARTUS de los archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente.
 
-2.Realice en quartus la simulacion para el BCD-7seg, analice los resultados.
-
-3. Cree el nuevo proyecto VERILOG QUARTUS para VisualizaciÈ´á Dinamica 4 Display, tomando como base los archivos dados.
-
-4.Creer el archivo testbench.v
-
-5.Genera la simulaciÈ´á, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
-
-6.Modificar o AÈ¶ªdir los bloques necesarios para que la visualizaciÈ´á sea en representaciÈ´á Decimal y no Hexadecimal.
-Realice la respectiva publicaciÈ´á del repositorio antes de la fecha dada con todo el cÈ™¥igo fuente.
+* Comprenda cada l®™nea del c®Ædigo HDL de los  archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
+* Realice en quartus la simulaci®Æn para el BCD-7seg, analice los resultados.
+* Cree el nuevo proyecto HDL para Visualizaci®Æn Din®¢mica 4 Display, tomando como base los archivos dados.
+* Creer el archivo testbench.v
+* Genera la simulaci®Æn, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
+* Modificar o A?adir los bloques necesarios para que la visualizaci®Æn sea en representaci®Æn Decimal y no Hexadecimal.
+* Realice la respectiva publicaci®Æn del repositorio antes de la fecha dada con todo el c®Ædigo  fuente 
 
 # Introduccion
 
-Para la realizacion de este laboratorio, utilizamos los codigos base que el profesor nos proporciono para el correcto funcionamiento del laboratorio. Cabe resaltar que se debe entender cada l√Énea del c√É¬≥digo para poder tener un mejor entendimiento a la hora de hacer preguntas que surgen a lo largo del laboratorio.   
+Para la realizacion de este laboratorio, utilizamos los codigos base que el profesor nos proporciono para el correcto funcionamiento del laboratorio. Cabe resaltar que se debe entender cada linea del codigo para poder tener un mejor entendimiento a la hora de hacer preguntas que surgen a lo largo del laboratorio.   
 
-## Dise√±o BCD-7seg
+## Dise?o BCD-7seg
 
 Para el dise√±o de un display de 7 segmentos y su respectiva visualizacion, se debe implementar el codigo base que tenemos y entender cada linea para asi poder conseguir conocimientos mas exactos al momento de implementar mas displays.
 
@@ -248,21 +244,20 @@ endmodule
 
 
 ```verilog
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps //Especifica la unidad de tiempo y precisi®Æn para la simulaci®Æn  donde se tiene el valor de la unidad de tiempo y el valor de la unidad de precisi®Æn.
 
 module testbench;
 
-	// Inputs
-	reg [15:0] num=0;
-	reg [15:0] i;
-	reg clk2;
-	reg rst;
+	// registro de ingreso
+	reg [15:0] num; // registro de 16 bits
+	reg clk2; //registro de reloj
+	reg rst; // registro de reset
 
 	// Outputs
-	wire [0:6] sseg;
+	wire [0:6] sseg; 
 	wire [3:0] an;
 
-	// Instantiate the Unit Under Test (UUT)
+	// Instanciaci®Æn del top, nombraremos los registros que se encuentran en otro archivo para poder simular aplicando cambios en nuestro bloque de inicio.
 	display uut (
 		.num(num), 
 		.clk(clk2), 
@@ -272,33 +267,30 @@ module testbench;
 	);
 
 	initial begin
-		// Initialize Inputs
+				
+		clk2= 0; //reloj empieza en cero
+		rst = 1; //el registro rst se pone en 1 para iniciar con el bloque de divisor de frecuencia, adem®¢s de ser fundamental para poner dos registros en valores iniciales como lo es "count" y "an"
+		#10 rst =0; //tiene un temporizador de 10ns, con rst en 0 nos pone en el else que nos permite poner variables definidas a "count", "an", y entrar al case donde realizara la selecci®Æn de cada n®≤mero para cada display 
 		
-		
-		clk2= 0;
-		rst = 1;
-		#10 rst =0;
-		
-		num = 16'h8439;
-		
+		num = 16'h8439;//dado que num es un registro de 16b de esta manera disponemos de los displays de derecha a izquierda, podemos seleccionar el n®≤mero que queremos poner en forma hexadecimal.
+
       
 
 	end
       
 
-	always #1 clk2 = ~clk2;
+	always #1 clk2 = ~clk2;//podemos hacer oscilar el reloj entre 0 y 1 para tener una frecuancia.
 	
 endmodule
-
 ```
 
 
-## SimulaciÈ´á Quartus
+## Simulaci®Æn Quartus
 
 ![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Display4Seg.png)
 
 # Conclusiones 
 
 ## 1
-Para poder entender el archivo buscamos identificar los valores num√©ricos que se encuentran dado, para iniciar quitamos los comentarios dentro del de ‚Äú.num(num)‚Äù ya que es necesario contar con esta dado que dar√° la instrucci√≥n del display actualmente esta en valor hexadecimal 4321 lo que significa que en el primer display mostrar√° el numero 1 luego el numero 2, 3 y finalmente el numero 4. Para poder identificar esto se modifica para que quede en 8439, para que muestre la combinaci√≥n de la siguiente manera display 1: numero 9, display 2: numero 3, display 3: numero 4, display 4: numero 8, se realiza la simulaci√≥n y esta funciona sin problemas. Conclusiones 
+Para poder entender el archivo buscamos identificar los valores num®¶ricos que se encuentran dado, para iniciar quitamos los comentarios dentro del de °∞.num(num)°± ya que es necesario contar con esta dado que dar®¢ la instrucci®Æn del display actualmente esta en valor hexadecimal 4321 lo que significa que en el primer display mostrar®¢ el numero 1 luego el numero 2, 3 y finalmente el numero 4. Para poder identificar esto se modifica para que quede en 8439, para que muestre la combinaci®Æn de la siguiente manera display 1: numero 9, display 2: numero 3, display 3: numero 4, display 4: numero 8, se realiza la simulaci®Æn y esta funciona sin problemas. 
 
