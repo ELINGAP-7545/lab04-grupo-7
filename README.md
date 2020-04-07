@@ -1,4 +1,4 @@
-# LABORATORIO BCD 
+# lab04
 
 INTENGRANTES
 
@@ -8,21 +8,28 @@ Fabian Santiago Martin Morantes 60821
 
 Juan David Sandoval Suarez 39718
 
-# Introduccion
+# Introducción
 
-Para la realizacion de este laboratorio, utilizamos los codigos entregados por el profesor para el correcto funcionamiento del laboratorio. Cabe resaltar que se debe entender cada linea del codigo para poder tener un mejor entendimiento a la hora de hacer preguntas que surgen a lo largo de este.   
+En este paquete de trabajo los estudiantes deben familiarizarce con el  framework de trabajo de la FPGA seleccionado, a partir de la descripción dedecodificador BCD2SSeg
 
-## Dise�o BCD-7seg
+Para este paquete de trabajo, deben estar inscrito en un grupo y clonar la información del siguiente link [WP04](https://classroom.github.com/g/zCBwHHKX). Una vez aceptado el repositorio debe descargarlo en su computador, para ello debe clonar el mismo. Si no sabe cómo hacerlo revise la metodología de trabajo, donde se explica el proceso
 
-En este Ejercicio se propone que realicen el dise�o, sintentizacion e implementacion del Display de 7 segmentos, el cual permita visualizar numeros  en representacion hexadecimal (0x0 a 0xF).  En el siguiente grafico, se observa cual es el funcionamiento deseado del display:
+Las documentación deben estar diligencia en el archivo README.md del repositorio clonado.
 
-[ Display 7 Segmentos](https://en.wikipedia.org/wiki/Seven-segment_display) 
+Una vez clone el repositorio, realice lo siguiente:
+
+## Diseño BCD-7seg
+
+En este punto, ya se estar en la capacidad de describir e implementar Hardware sencillo, con la ayuda de herramientas computaciones.  y como se vio en los dos ejemplos anteriores, la suma se visualiza en leds,  algo que es difícil para  validad visualmente la respuesta. Por lo tanto, es aconsejable tener una visualización mas acorde a las necesidades, como por ejemplo  visualizar los resultados en el [ Display 7 Segmentos](https://en.wikipedia.org/wiki/Seven-segment_display) 
+
+En este Ejercicio se propone que realicen el diseño, sintentización e implementación del Display de 7 sergmentos, el cual permita visualizar números  en representación hexadecimal (0x0 a 0xF).  En el siguiente gráfico, se observa cual es el funcionamiento deseado del display:
+
 
 ![gif display](https://upload.wikimedia.org/wikipedia/commons/2/2b/Seven_segment_display-animated.gif)
 
 Imagen tomada de [User:Guam + Various](https://commons.wikimedia.org/wiki/File:Seven_segment_display-animated.gif)
 
-A continuacion se presentan los pasos recomendados para el ejercicio:
+A continuación se presentan los pasos recomendados para el ejercicio:
 
 **Definir la caja funcional del BCD**: 
 
@@ -31,30 +38,15 @@ A continuacion se presentan los pasos recomendados para el ejercicio:
 Si observa la caja negra/ funcional  ademas  de la salidad de 7 segmentos contiene  una salida `An`. esta salida es para conectar eventualmente el ánodo del display y  poder hacer visualización dinámica, cuando se tiene mas de un display conectado.
 
 
-**Definir la descripcion Funcional**
+**Definir la descripción Funcional**
 
-Un display 7 segmentos es un visualizador de numeros o letras dependiendo de la conexion externa para lo que se desee implementar. Esta construido por unos leds que tienen unas conexiones internas para su correcto funcionamiento, existen dos tipos de visualizadores y se diferencian en la entrada de alimentacion. 
-
-**Anodo Comun:** Este visualizador tiene todos los anodos de los leds conectados internamente. Para poder encender cada uno de los segmentos, se debe aplicar un potencial negativo (en logica binaria 0).
-
-**Catodo Comun:** Este visualizador tiene todos los catodos de los leds conectados internamente. Para poder encender cada uno de los segmentos, se debe aplicar un potencial positivo (en logica binaria 1).
-
-Se recomienda implementar externamente una resitencia detro de lo posible de 330? a cada segmento del display para asi poder limitar la corriente.
-Despues de tener claro lo anterior, procedemos a realizar la tabla de verdad del visualizador de 7 segmentos (display), para cada numero y/o letra que se desee ver. Para ello se tiene en cuenta la conexion interna del display que se presenta a continuacion:
-
-![imagen_display_7_seg](https://http2.mlstatic.com/display-7-segmentos-D_NQ_NP_965598-MLM29489271353_022019-F.jpg)
-
-De la anterior imagen podemos sacar las siguientes tablas de verdad:
-
-![tabla_de_verdad](https://http2.mlstatic.com/display-7-segmentos-D_NQ_NP_965598-MLM29489271353_022019-F.jpg)
-
-Para ello recuerde  que puede hacer uso, bien sea, de las tablas de verdad o de la descripción algorítmica del BCD a  siete segmentos. Recuerde que cada Segmento es una salida  del dise�o. Ejemplo, si desea  visualizar el numero **1**, la salida seria  de `Sseg es 0110000`. observe la grafica a continuacion, para generar las salidas acorde al numero de entrada.
+Para ello recuerde  que puede hacer uso, bien sea, de las tablas de verdad o de la descripción algorítmica del BCD a  siete segmentos. Recuerde que cada Segmento es una salida  del diseño. Ejemplo, si desea  visualizar el número **1**, la salida seria  de `Sseg es 0110000`. observe la gráfica a continuación, para generar las salidas acorde al número de entrada.
 
 ![sseg](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/7_segment_display_labeled.svg/1024px-7_segment_display_labeled.svg.png)
 
 
-* Definir en QUARTUS el comportamiento del sistema ** :  Use Verilog para hacer la descripcion funcional
-**simulacion de Sistema** :  Use el Testbench para este fin.
+* Definir en  HDL el comportamiento del sistema ** :  Use Verilog para hacer la descripción funcional
+**simulación de Sistema** :  Use el Testbench para este fin.
 
 Se realiza verificacion de los siguientes codigos en el programa QUARTUS
 
@@ -75,17 +67,17 @@ Dejando como TOP a BCDtoSSeg, al momento de realizar la simulacion Testbench se 
 ![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Quartus%207seg1Display.jpg)
 
 
-# Ejercicio - Visualizacion Dinamica 4 Display
+# Ejercicio - Visualización Dinámica 4 Display
 
 
 Si el diseño digital de algún sistema se requiere mas de un display de 7 segmentos, es necesario  generar una visualización tal que sea necesario el menor número de pines para conectar todos los display en con la FPGA.
 
 
-Por ahora, se ha visualizado el numeros en un solo display de 7 segmentos. Pero en la mayoría de los casos, los 7 pines de los cátodos estan inter-conectados entre cada display, como se observa en la figura:
+Por ahora, se ha visualizado el números en un solo display de 7 segmentos. Pero en la mayoría de los casos, los 7 pines de los cátodos están inter-conectados entre cada display, como se observa en la figura:
 
 ![conex](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/conex.png)
 
-Por lo tanto, se debe  realizar una multiplexacion  entre los Anodos de cada Display, con el fin de visualizar en cada display un número diferente.  En otras palabras, en cada instante de tiempo, solo un display se encuentra activo. En este sentido, se debe garantizar que el destello en la visualización entre cada display no se perciba. Para ello, cada display debe activarse máximo cada 16 ms.
+Por lo tanto, se debe  realizar una multiplexación  entre los Anodos de cada Display, con el fin de visualizar en cada display un número diferente.  En otras palabras, en cada instante de tiempo, solo un display se encuentra activo. En este sentido, se debe garantizar que el destello en la visualización entre cada display no se perciba. Para ello, cada display debe activarse máximo cada 16 ms.
 
 Visualmente esto se entiende mas con la siguiente simulación, donde se desea visualizar el  número en representación hexadecimal `0x4321`:
 
@@ -97,7 +89,7 @@ Como siempre, antes de realizar la descripción del hardware se debe diseñar la
 
 ![diagrama caja negra ](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/display_7segx4.jpg)
 
-En este sentido, se adiciona al HDL de siete segmentos 4 se�ales de control para el LCD, llamadas An. cada bit de la se�al `An` debe ser modificado en el tiempo, con el fin de activar solo un display.  
+En este sentido, se adiciona al HDL de siete segmentos 4 señales de control para el LCD, llamadas An. cada bit de la señal `An` debe ser modificado en el tiempo, con el fin de activar solo un display.  
 
 ## Diagrama Estructural 
 
@@ -116,7 +108,7 @@ Una vez clone el repositorio y lea la anterior guia, realice lo siguiente:
 En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta la descripción del hardware que se implementa para visualizar un número hexadecimal de 32 bits en un display  y en 4 display de 7 segmentos.
 
 
-* Comprenda cada li�nea del codigo HDL de los  archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
+* Comprenda cada línea del código HDL de los  archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
 * Realice en quartus la simulación para el BCD-7seg, analice los resultados.
 * Cree el nuevo proyecto HDL para Visualización Dinámica 4 Display, tomando como base los archivos dados.
 * Creer el archivo testbench.v
@@ -124,7 +116,7 @@ En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta 
 * Modificar o Añadir los bloques necesarios para que la visualización sea en representación Decimal y no Hexadecimal.
 * Realice la respectiva publicación del repositorio antes de la fecha dada con todo el código  fuente 
 
-# VERILOG QUARTUS
+# HDL
 
 ## 7 Segmentos 1 Display 
 ```verilog
@@ -363,10 +355,5 @@ endmodule
 
 ## 1
 Para poder entender el archivo buscamos identificar los valores numéricos que se encuentran dado, para iniciar quitamos los comentarios dentro del de “.num(num)” ya que es necesario contar con esta dado que dará la instrucción del display actualmente esta en valor hexadecimal 4321 lo que significa que en el primer display mostrará el numero 1 luego el numero 2, 3 y finalmente el numero 4. Para poder identificar esto se modifica para que quede en 8439, para que muestre la combinación de la siguiente manera display 1: numero 9, display 2: numero 3, display 3: numero 4, display 4: numero 8, se realiza la simulación y esta funciona sin problemas.
-
-
-
-
-prueba
 
 

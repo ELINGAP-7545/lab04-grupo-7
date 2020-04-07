@@ -24,36 +24,17 @@ module testbench;
 	initial begin
 		// Initialize Inputs
 		
-
-		for(i=0;i<100;i=i+1)begin
-		
-		clk= 0;
-
 		//for(i=0;i<10;i=i+1)begin
 		clk2= 0;
-
 		rst = 1;
 		#10 rst =0;
 		
-		num = 16'h8439;
-
-		num=num+1;
+		num = 16'h843A;
 		
-end
-		
-		end
-		
-		//num = 16'h4321;
-     initial begin: COUNT_CASE
-     $dumpfile("testbench.vcd");
-    
-   end   
-
       //end
 
-
+	end
       
-
 
 	always #1 clk2 = ~clk2;
 	
