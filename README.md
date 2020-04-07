@@ -169,7 +169,7 @@ endmodule
 Se crea en la siguiente ruta: https://github.com/ELINGAP-7545/lab04-grupo-7/tree/master/7segx4Display
 
 ```verilog
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps       //Es una escala de tiempo que indica el valor de cada unidad de tiempo, en este caso cada unidad es 1ns y la simulacion tiene una presicion de 1ps
 module display(
     input [15:0] num,
     input clk,
