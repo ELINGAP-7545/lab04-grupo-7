@@ -33,13 +33,8 @@ Para la realizacion de este laboratorio, utilizamos los codigos base que el prof
 
 ## Dise?o BCD-7seg
 
-Para el diseño de un display de 7 segmentos y su respectiva visualizacion, se debe implementar el codigo base que tenemos y entender cada linea para asi poder conseguir conocimientos mas exactos al momento de implementar mas displays.
+Para el diseo de un display de 7 segmentos y su respectiva visualizacion, se debe implementar el codigo base que tenemos y entender cada linea para asi poder conseguir conocimientos mas exactos al momento de implementar mas displays.
 
-**Definir la caja funcional del BCD**: 
-
-![bcd_black](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab03-BCD2SSeg/doc/BCD2SSeg.jpg)
-
-Como se puede apreciar en la imagen, se observa que se tiene una entrada llamada BCD de 4 bit's, una salida llamada An la cual sera utilizada para conectar el anodo del display y poder hacer la  visualizacion dinamica, cuando se tiene mas de un display conectado y una salida llamada SSEG de 7 bit's que van conectados al display. 
 
 **Definir la descripcion Funcional**
 
