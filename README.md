@@ -18,12 +18,17 @@ Una vez clone el repositorio y lea la anterior guia, realice lo siguiente:
 
 En el paquete de trabajo WP04 esta la descripción del hardware que se implementa para visualizar un número hexadecimal de 32 bits en un display y en 4 display de 7 segmentos.
 
-1. Comprenda cada linea del codigo VERILOG QUARTUS de los archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
-Realice en quartus la simulacion para el BCD-7seg, analice los resultados.
-2. Cree el nuevo proyecto VERILOG QUARTUS para Visualización Dinamica 4 Display, tomando como base los archivos dados.
-3.Creer el archivo testbench.v
-4.Genera la simulación, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
-5.Modificar o Añadir los bloques necesarios para que la visualización sea en representación Decimal y no Hexadecimal.
+1. Comprenda cada linea del codigo VERILOG QUARTUS de los archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente.
+
+2.Realice en quartus la simulacion para el BCD-7seg, analice los resultados.
+
+3. Cree el nuevo proyecto VERILOG QUARTUS para Visualización Dinamica 4 Display, tomando como base los archivos dados.
+
+4.Creer el archivo testbench.v
+
+5.Genera la simulación, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
+
+6.Modificar o Añadir los bloques necesarios para que la visualización sea en representación Decimal y no Hexadecimal.
 Realice la respectiva publicación del repositorio antes de la fecha dada con todo el código fuente.
 
 # VERILOG QUARTUS
