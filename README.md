@@ -170,28 +170,24 @@ Se crea en la siguiente ruta: https://github.com/ELINGAP-7545/lab04-grupo-7/tree
 
 ```verilog
 `timescale 1ns / 1ps       //Es una escala de tiempo que indica el valor de cada unidad de tiempo, en este caso cada unidad es 1ns y la simulacion tiene una presicion de 1ps
-module display(
-
-    //Inputs
+module display( //delcaracion de registros entradas,salidas, cantidad de bits.
     input [15:0] num,
     input clk,
-    
-    //Outputs
-    output [0:6] sseg,    //se observa que se tiene una salida llamada sseg de 7 bit's que van conectados al display
+    output [0:6] sseg,
     output reg [3:0] an,
-	 input rst,      //Input
-	 output led      //Output
+	 input rst,
+	 output led
     );
 
 
 
-reg [3:0]bcd=0;
-//wire [15:0] num=16'h4321;
+reg [3:0]bcd=0; // registro de 4 bit inicializado en 0
  
-BCDtoSSeg bcdtosseg(.BCD(bcd), .SSeg(sseg));
+BCDtoSSeg bcdtosseg(.BCD(bcd), .SSeg(sseg)); //ya que este es una instanciacion nombramos el .v que vamos a utilziar
 
-reg [26:0] cfreq=0;
-wire enable;
+reg [26:0] cfreq=0; // registro de 27 bit inicializado en 0
+wire enable; // conexion o cable nombrado enable
+
 
 // Divisor de frecuecia
 
@@ -206,24 +202,33 @@ always @(posedge clk) begin
 	end
 end
 
-reg [1:0] count =0;
-always @(posedge enable) begin
-		if(rst==1) begin
-			count<= 0;
-			an<=4'b1111; 
-		end else begin 
-			count<= count+1;
-			an<=4'b1101; 
-			case (count) 
-				2'h0: begin bcd <= num[3:0];   an<=4'b1110; end 
-				2'h1: begin bcd <= num[7:4];   an<=4'b1101; end 
+reg [1:0] count =0; //registro de 1 bit iniicializador en 0
+always @(posedge enable) begin //entrara al bliqe cuando tenga un flanco de subida del cable enable
+		if(rst==1) begin // realziara una prefunta por el registro rst si es igual a 1
+			count<= 0; // en caso de que el if sea verdadero  realizara la asignacion de 0 en count
+			an<=4'b1111; // realiza la asignacion de an la cual controla los anados de los displays
+					//en 4 bist binario en 1111 lo que indica que esten apagados
+		end else begin // si el if no se cumple realizara lo siguiente
+			count<= count+1; //asignara count y le sumara 1
+			an<=4'b1101; //se asignara an 1101 donde al anodo del segundo displat estara activo 
+			case (count) // pasara a realziar 4 tipos de casos
+				2'h0: begin bcd <= num[3:0];   an<=4'b1110; end //en el primer caso se asigna an con 1110
+					//lo que corresponde a que se active el anodo del primer display
+					// se asgna los primero 4 bits a num que realizaran que sera buscado en el archivo 
+					// de instanciacion
+				2'h1: begin bcd <= num[7:4];   an<=4'b1101; end // relizara el mismo procedimiento con la 
+					//diferencia de que apagara el primer display y activara el anodo del segundo,
+					// utilizara la misma condicion de busqueda pero con los bit del 4 al 7.
 				2'h2: begin bcd <= num[11:8];  an<=4'b1011; end 
 				2'h3: begin bcd <= num[15:12]; an<=4'b0111; end 
+				// de esta forma continuara activando y desactivando los anodos de cada display y buscando
+				//en el registro num sus correspondientes 4 bist para cada display.
 			endcase
 		end
 end
 
 endmodule
+
 ```
 
 ## Testbench
