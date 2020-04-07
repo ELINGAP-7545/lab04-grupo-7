@@ -16,20 +16,54 @@ Juan David Sandoval Suarez 39718
 
 Una vez clone el repositorio y lea la anterior guia, realice lo siguiente:
 
-En el paquete de trabajo WP04 esta la descripciÛn del hardware que se implementa para visualizar un n˙mero hexadecimal de 32 bits en un display y en 4 display de 7 segmentos.
+En el paquete de trabajo WP04 esta la descripciÈ´á del hardware que se implementa para visualizar un nÈ∑êero hexadecimal de 32 bits en un display y en 4 display de 7 segmentos.
 
 1. Comprenda cada linea del codigo VERILOG QUARTUS de los archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente.
 
 2.Realice en quartus la simulacion para el BCD-7seg, analice los resultados.
 
-3. Cree el nuevo proyecto VERILOG QUARTUS para VisualizaciÛn Dinamica 4 Display, tomando como base los archivos dados.
+3. Cree el nuevo proyecto VERILOG QUARTUS para VisualizaciÈ´á Dinamica 4 Display, tomando como base los archivos dados.
 
 4.Creer el archivo testbench.v
 
-5.Genera la simulaciÛn, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
+5.Genera la simulaciÈ´á, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
 
-6.Modificar o AÒadir los bloques necesarios para que la visualizaciÛn sea en representaciÛn Decimal y no Hexadecimal.
-Realice la respectiva publicaciÛn del repositorio antes de la fecha dada con todo el cÛdigo fuente.
+6.Modificar o AÈ¶ªdir los bloques necesarios para que la visualizaciÈ´á sea en representaciÈ´á Decimal y no Hexadecimal.
+Realice la respectiva publicaciÈ´á del repositorio antes de la fecha dada con todo el cÈ™¥igo fuente.
+
+# Introduccion
+
+Para la realizacion de este laboratorio, utilizamos los codigos base que el profesor nos proporciono para el correcto funcionamiento del laboratorio. Cabe resaltar que se debe entender cada l√Énea del c√É¬≥digo para poder tener un mejor entendimiento a la hora de hacer preguntas que surgen a lo largo del laboratorio.   
+
+## Dise√±o BCD-7seg
+
+Para el dise√±o de un display de 7 segmentos y su respectiva visualizacion, se debe implementar el codigo base que tenemos y entender cada linea para asi poder conseguir conocimientos mas exactos al momento de implementar mas displays.
+
+**Definir la caja funcional del BCD**: 
+
+![bcd_black](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab03-BCD2SSeg/doc/BCD2SSeg.jpg)
+
+Como se puede apreciar en la imagen, se observa que se tiene una entrada llamada BCD de 4 bit's, una salida llamada An la cual sera utilizada para conectar el anodo del display y poder hacer la  visualizacion dinamica, cuando se tiene mas de un display conectado y una salida llamada SSEG de 7 bit's que van conectados al display. 
+
+**Definir la descripci√É¬≥n Funcional**
+
+Un display de 7 segmentos es un visualizador de numeros o letras, dependiendo de la conexion externa para lo que se desee implementar. Esta construido por unos leds que tienen unas conexiones internas para su correcto funcionamiento, existen dos tipos de visualizadores y se diferencian en la entrada de alimentacion. 
+
+**Anodo Comun:** Este visualizador tiene todos los anodos de los leds conectados internamente. Para poder encender cada uno de los segmentos, se debe aplicar un potencial negativo (en logica binaria 0).
+
+**Catodo Comun:** Este visualizador tiene todos los catodos de los leds conectados internamente. Para poder encender cada uno de los segmentos, se debe aplicar un potencial positivo (en logica binaria 1).
+
+Se recomienda implementar externamente una resitencia detro de lo posible de 330 ohmios a cada segmento del display para asi poder limitar la corriente.
+
+Despues de tener claro lo anterior, procedemos a realizar la tabla de verdad del visualizador de 7 segmentos (display), para cada numero y/o letra que se desee ver. Para ello se tiene en cuenta la conexion interna del display que se presenta a continuacion:
+
+![imagen_display_7_seg](https://http2.mlstatic.com/display-7-segmentos-D_NQ_NP_965598-MLM29489271353_022019-F.jpg)
+
+De la anterior imagen podemos sacar las siguientes tablas de verdad:
+
+![tabla_de_verdad]()
+
+Teniendo la tabla de verdad, se procede a revisar y simular el siguiente codigo
 
 # VERILOG QUARTUS
 
@@ -147,7 +181,7 @@ endmodule
 
 ```
 
-## SimulaciÛn Quartus
+## SimulaciÈ´á Quartus
 
 ![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Quartus%207seg1Display.jpg)
 
@@ -260,12 +294,12 @@ endmodule
 ```
 
 
-## SimulaciÛn Quartus
+## SimulaciÈ´á Quartus
 
 ![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Display4Seg.png)
 
 # Conclusiones 
 
 ## 1
-Para poder entender el archivo buscamos identificar los valores num®¶ricos que se encuentran dado, para iniciar quitamos los comentarios dentro del de °∞.num(num)°± ya que es necesario contar con esta dado que dar®¢ la instrucci®Æn del display actualmente esta en valor hexadecimal 4321 lo que significa que en el primer display mostrar®¢ el numero 1 luego el numero 2, 3 y finalmente el numero 4. Para poder identificar esto se modifica para que quede en 8439, para que muestre la combinaci®Æn de la siguiente manera display 1: numero 9, display 2: numero 3, display 3: numero 4, display 4: numero 8, se realiza la simulaci®Æn y esta funciona sin problemas. Conclusiones 
+Para poder entender el archivo buscamos identificar los valores num√©ricos que se encuentran dado, para iniciar quitamos los comentarios dentro del de ‚Äú.num(num)‚Äù ya que es necesario contar con esta dado que dar√° la instrucci√≥n del display actualmente esta en valor hexadecimal 4321 lo que significa que en el primer display mostrar√° el numero 1 luego el numero 2, 3 y finalmente el numero 4. Para poder identificar esto se modifica para que quede en 8439, para que muestre la combinaci√≥n de la siguiente manera display 1: numero 9, display 2: numero 3, display 3: numero 4, display 4: numero 8, se realiza la simulaci√≥n y esta funciona sin problemas. Conclusiones 
 
