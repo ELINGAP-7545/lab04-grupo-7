@@ -132,7 +132,8 @@ endmodule
 
 ```verilog
 
-`timescale 1ns / 1ps  
+`timescale 1ns / 1ps  //Es una escala de tiempo que indica el valor de cada unidad de tiempo, en este caso cada unidad es 1ns y la simulacion tiene una presicion de 1ps
+
 
 
 module BCDtoSSeg_TB;
@@ -171,15 +172,15 @@ module BCDtoSSeg_TB;
 	end
 
    initial begin: TEST_CASE
-     $dumpfile("BCDtoSSeg_TB.vcd");
-     #(200) $finish;
+     $dumpfile("BCDtoSSeg_TB.vcd");     //Se usa para volcar los cambios en los registros de un archivo,los cambios se registran en un archivo llamado VCD que significa volcado de cambio de valor. En este caso volcara los cambios del archivo llamado BCDtoSSeg_TB.vcd
+     #(200) $finish;      //Tenemos un retardo de tiempo de 200, seguido de $finish que significa que sale de la simulación y devuelve el control al sistema operativo   
    end
 
 endmodule
 
 ```
 
-## Simulaci髇 Quartus
+## Simulacion Quartus
 
 ![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Quartus%207seg1Display.jpg)
 
