@@ -10,23 +10,6 @@ Fabian Santiago Martin Morantes 60821
 
 Juan David Sandoval Suarez 39718
 
-
-
-# Entregables
-
-Una vez clone el repositorio y lea la anterior guia, realice lo siguiente:
-
-En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta la descripci車n del hardware que se implementa para visualizar un n迆mero hexadecimal de 32 bits en un display  y en 4 display de 7 segmentos.
-
-
-* Comprenda cada l赤nea del c車digo HDL de los  archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
-* Realice en quartus la simulaci車n para el BCD-7seg, analice los resultados.
-* Cree el nuevo proyecto HDL para Visualizaci車n Din芍mica 4 Display, tomando como base los archivos dados.
-* Creer el archivo testbench.v
-* Genera la simulaci車n, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
-* Modificar o A?adir los bloques necesarios para que la visualizaci車n sea en representaci車n Decimal y no Hexadecimal.
-* Realice la respectiva publicaci車n del repositorio antes de la fecha dada con todo el c車digo  fuente 
-
 # Introduccion
 
 Para la realizacion de este laboratorio, utilizamos los codigos base que el profesor nos proporciono para el correcto funcionamiento del laboratorio. Cabe resaltar que se debe entender cada linea del codigo para poder tener un mejor entendimiento a la hora de hacer preguntas que surgen a lo largo del laboratorio.   
@@ -164,7 +147,7 @@ module BCDtoSSeg_TB;
 
    initial begin: TEST_CASE
      $dumpfile("BCDtoSSeg_TB.vcd");     //Se usa para volcar los cambios en los registros de un archivo,los cambios se registran en un archivo llamado VCD que significa volcado de cambio de valor. En este caso volcara los cambios del archivo llamado BCDtoSSeg_TB.vcd
-     #(200) $finish;      //Tenemos un retardo de tiempo de 200, seguido de $finish que significa que sale de la simulaci籀n y devuelve el control al sistema operativo   
+     #(200) $finish;      //Tenemos un retardo de tiempo de 200, seguido de $finish que significa que sale de la simulacion y devuelve el control al sistema operativo   
    end
 
 endmodule
@@ -239,8 +222,8 @@ endmodule
 
 
 ```verilog
-`timescale 1ns / 1ps //Especifica la unidad de tiempo y precisi車n para la 
-			//simulaci車n  donde se tiene el valor de la unidad de tiempo y el valor de la unidad de precisi車n.
+`timescale 1ns / 1ps //Especifica la unidad de tiempo y precision para la 
+			//simulacion  donde se tiene el valor de la unidad de tiempo y el valor de la unidad de precision.
 
 module testbench;
 
@@ -253,7 +236,7 @@ module testbench;
 	wire [0:6] sseg; 
 	wire [3:0] an;
 
-	// Instanciaci車n del top, nombraremos los registros que se 
+	// Instanciacion del top, nombraremos los registros que se 
 	//encuentran en otro archivo para poder simular aplicando cambios en nuestro bloque de inicio.
 	display uut (
 		.num(num), 
@@ -267,14 +250,14 @@ module testbench;
 				
 		clk2= 0; //reloj empieza en cero
 		rst = 1; //el registro rst se pone en 1 para iniciar con el bloque de divisor de 
-			//frecuencia, adem芍s de ser fundamental para poner dos registros en valores 
+			//frecuencia, ademas de ser fundamental para poner dos registros en valores 
 			//iniciales como lo es "count" y "an"
 		#10 rst =0; //tiene un temporizador de 10ns, con rst en 0 nos pone en el else que nos 
 			//permite poner variables definidas a "count", "an", y entrar al case donde 
-			//realizara la selecci車n de cada n迆mero para cada display 
+			//realizara la seleccion de cada numero para cada display 
 		
 		num = 16'h8439;//dado que num es un registro de 16b de esta manera disponemos de los displays de derecha 
-				//a izquierda, podemos seleccionar el n迆mero que queremos poner en forma hexadecimal.
+				//a izquierda, podemos seleccionar el numero que queremos poner en forma hexadecimal.
 
       
 
@@ -284,15 +267,17 @@ module testbench;
 	always #1 clk2 = ~clk2;//podemos hacer oscilar el reloj entre 0 y 1 para tener una frecuancia.
 	
 endmodule
+	
+endmodule
 ```
 
 
-## Simulaci車n Quartus
+## Simulacion Quartus
 
 ![diagrama](https://github.com/ELINGAP-7545/lab04-grupo-7/blob/master/Imagenes/Display4Seg.png)
 
 # Conclusiones 
 
 ## 1
-Para poder entender el archivo buscamos identificar los valores num谷ricos que se encuentran dado, para iniciar quitamos los comentarios dentro del de ※.num(num)§ ya que es necesario contar con esta dado que dar芍 la instrucci車n del display actualmente esta en valor hexadecimal 4321 lo que significa que en el primer display mostrar芍 el numero 1 luego el numero 2, 3 y finalmente el numero 4. Para poder identificar esto se modifica para que quede en 8439, para que muestre la combinaci車n de la siguiente manera display 1: numero 9, display 2: numero 3, display 3: numero 4, display 4: numero 8, se realiza la simulaci車n y esta funciona sin problemas. 
+Para poder entender el archivo buscamos identificar los valores numericos que se encuentran dado, para iniciar quitamos los comentarios dentro del de “.num(num)” ya que es necesario contar con esta dado que dara la instruccion del display actualmente esta en valor hexadecimal 4321 lo que significa que en el primer display mostrara el numero 1 luego el numero 2, 3 y finalmente el numero 4. Para poder identificar esto se modifica para que quede en 8439, para que muestre la combinacion de la siguiente manera display 1: numero 9, display 2: numero 3, display 3: numero 4, display 4: numero 8, se realiza la simulacion y esta funciona sin problemas. 
 
