@@ -232,7 +232,7 @@ endmodule
 module testbench;
 
 	// registro de ingreso
-	reg [15:0] num; // registro de 16 bits
+	reg [15:0] num; //Se observa que se tiene un registro de 16 bit's
 	reg clk2; //registro de reloj
 	reg rst; // registro de reset
 
