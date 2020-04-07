@@ -31,7 +31,7 @@ En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta 
 
 Para la realizacion de este laboratorio, utilizamos los codigos base que el profesor nos proporciono para el correcto funcionamiento del laboratorio. Cabe resaltar que se debe entender cada linea del codigo para poder tener un mejor entendimiento a la hora de hacer preguntas que surgen a lo largo del laboratorio.   
 
-## Dise?o BCD-7seg
+## Diseno BCD-7seg
 
 Para el diseo de un display de 7 segmentos y su respectiva visualizacion, se debe implementar el codigo base que tenemos y entender cada linea para asi poder conseguir conocimientos mas exactos al momento de implementar mas displays.
 
@@ -239,7 +239,8 @@ endmodule
 
 
 ```verilog
-`timescale 1ns / 1ps //Especifica la unidad de tiempo y precisi車n para la simulaci車n  donde se tiene el valor de la unidad de tiempo y el valor de la unidad de precisi車n.
+`timescale 1ns / 1ps //Especifica la unidad de tiempo y precisi車n para la 
+			//simulaci車n  donde se tiene el valor de la unidad de tiempo y el valor de la unidad de precisi車n.
 
 module testbench;
 
@@ -252,7 +253,8 @@ module testbench;
 	wire [0:6] sseg; 
 	wire [3:0] an;
 
-	// Instanciaci車n del top, nombraremos los registros que se encuentran en otro archivo para poder simular aplicando cambios en nuestro bloque de inicio.
+	// Instanciaci車n del top, nombraremos los registros que se 
+	//encuentran en otro archivo para poder simular aplicando cambios en nuestro bloque de inicio.
 	display uut (
 		.num(num), 
 		.clk(clk2), 
@@ -264,10 +266,15 @@ module testbench;
 	initial begin
 				
 		clk2= 0; //reloj empieza en cero
-		rst = 1; //el registro rst se pone en 1 para iniciar con el bloque de divisor de frecuencia, adem芍s de ser fundamental para poner dos registros en valores iniciales como lo es "count" y "an"
-		#10 rst =0; //tiene un temporizador de 10ns, con rst en 0 nos pone en el else que nos permite poner variables definidas a "count", "an", y entrar al case donde realizara la selecci車n de cada n迆mero para cada display 
+		rst = 1; //el registro rst se pone en 1 para iniciar con el bloque de divisor de 
+			//frecuencia, adem芍s de ser fundamental para poner dos registros en valores 
+			//iniciales como lo es "count" y "an"
+		#10 rst =0; //tiene un temporizador de 10ns, con rst en 0 nos pone en el else que nos 
+			//permite poner variables definidas a "count", "an", y entrar al case donde 
+			//realizara la selecci車n de cada n迆mero para cada display 
 		
-		num = 16'h8439;//dado que num es un registro de 16b de esta manera disponemos de los displays de derecha a izquierda, podemos seleccionar el n迆mero que queremos poner en forma hexadecimal.
+		num = 16'h8439;//dado que num es un registro de 16b de esta manera disponemos de los displays de derecha 
+				//a izquierda, podemos seleccionar el n迆mero que queremos poner en forma hexadecimal.
 
       
 
