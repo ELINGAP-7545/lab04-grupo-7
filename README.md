@@ -16,7 +16,7 @@ Juan David Sandoval Suarez 39718
 
 Una vez clone el repositorio y lea la anterior guia, realice lo siguiente:
 
-En el paquete de trabajo WP04 esta la descripci¨®n del hardware que se implementa para visualizar un n¨²mero hexadecimal de 32 bits en un display y en 4 display de 7 segmentos.
+En el paquete de trabajo WP04 esta la descripción del hardware que se implementa para visualizar un número hexadecimal de 32 bits en un display y en 4 display de 7 segmentos.
 
 1. Comprenda cada linea del codigo VERILOG QUARTUS de los archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
 Realice en quartus la simulacion para el BCD-7seg, analice los resultados.
