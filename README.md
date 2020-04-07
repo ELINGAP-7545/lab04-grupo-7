@@ -46,7 +46,9 @@ Tener encuenta que el siguiente codigo representa los leds que se van a encontra
 module BCDtoSSeg (BCD, SSeg, an);
 
 //Inputs
-input [3:0] BCD;   // 	
+input [3:0] BCD;   //se observa que se tiene una entrada llamada BCD de 4 bit's
+
+
 output reg [0:6] SSeg;	
 output [3:0] an;	
 
