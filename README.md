@@ -1,4 +1,4 @@
-# lab04
+# LABORATORIO BCD 
 
 INTENGRANTES
 
@@ -8,11 +8,11 @@ Fabian Santiago Martin Morantes 60821
 
 Juan David Sandoval Suarez 39718
 
-# Introducción
+# Introduccion
 
 Para la realización de este laboratorio, utilizamos los códigos base que el profesor nos proporcionó para el correcto funcionamiento del laboratorio. Cabe resaltar que se debe entender cada l�nea del código para poder tener un mejor entendimiento a la hora de hacer preguntas que surgen a lo largo del laboratorio.   
 
-## Diseño BCD-7seg
+## Dise�o BCD-7seg
 
 Para el diseño de un display de 7 segmentos y su respectiva visualización, se debe implementar el código base que tenemos y entender cada l�nea para as� poder conseguir conocimientos más exactos al momento de implementar más displays.
 
@@ -136,7 +136,7 @@ En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta 
 * Modificar o Añadir los bloques necesarios para que la visualización sea en representación Decimal y no Hexadecimal.
 * Realice la respectiva publicación del repositorio antes de la fecha dada con todo el código  fuente 
 
-# HDL
+# VERILOG QUARTUS
 
 ## 7 Segmentos 1 Display 
 ```verilog
